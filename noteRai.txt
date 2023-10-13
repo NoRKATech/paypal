@@ -1,0 +1,320 @@
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~
+$ git -v
+git version 2.42.0.windows.2
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~
+$ cd Documents/
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents
+$ mkdir paypal
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents
+$
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents
+$ cd paypal/
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal
+$ git init
+Initialized empty Git repository in C:/Users/Raissa/Documents/paypal/.git/
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ vi list.txt
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ cat list.txt
+octave
+annie
+maurice
+vianney
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        list.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ ls
+list.txt
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        list.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ echo 'I am rich' > rich
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        list.txt
+        rich
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ ls
+list.txt  rich
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ echo deployment is ready > deploy.sh
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ cat deploy.sh
+deployment is ready
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ cat rich
+I am rich
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ ls
+deploy.sh  list.txt  rich
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git add list.txt
+warning: in the working copy of 'list.txt', LF will be replaced by CRLF the next time Git touches it
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   list.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        deploy.sh
+        rich
+
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git add *
+warning: in the working copy of 'deploy.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'rich', LF will be replaced by CRLF the next time Git touches it
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   deploy.sh
+        new file:   list.txt
+        new file:   rich
+
+#Ist STAGE (GitPUSH)
+-------------------
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git commit -m "first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Raissa@DESKTOP-VQJ8FF1.(none)')
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$  git config --global user.email "rvmassado23@gmail.com"
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git config --global user.name "Raissa Massado"
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git commit -m "first commit"
+[master (root-commit) 55a0895] first commit
+ 3 files changed, 6 insertions(+)
+ create mode 100644 deploy.sh
+ create mode 100644 list.txt
+ create mode 100644 rich
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git log
+commit 55a0895b1201466f74c6535df1aebbf91c677b95 (HEAD -> master)
+Author: Raissa Massado <rvmassado23@gmail.com>
+Date:   Thu Oct 12 23:21:12 2023 -0700
+
+    first commit
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ remote - v
+bash: remote: command not found
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git remote -v
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git remote add vv https://github.com/NoRKATech/paypal.git
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git remote -v
+vv      https://github.com/NoRKATech/paypal.git (fetch)
+vv      https://github.com/NoRKATech/paypal.git (push)
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git push vv master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 352 bytes | 352.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/NoRKATech/paypal.git
+ * [new branch]      master -> master
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ cat rich
+I am rich
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git log
+commit 55a0895b1201466f74c6535df1aebbf91c677b95 (HEAD -> master, vv/master)
+Author: Raissa Massado <rvmassado23@gmail.com>
+Date:   Thu Oct 12 23:21:12 2023 -0700
+
+    first commit
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ cat rich
+I am rich
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ ls
+deploy.sh  list.txt  rich
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git remote -v
+vv      https://github.com/NoRKATech/paypal.git (fetch)
+vv      https://github.com/NoRKATech/paypal.git (push)
+
+#IVth STAGE(GitPULL)
+---------------------
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git pull vv master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), 265 bytes | 37.00 KiB/s, done.
+From https://github.com/NoRKATech/paypal
+ * branch            master     -> FETCH_HEAD
+   55a0895..0c4ad26  master     -> vv/master
+Updating 55a0895..0c4ad26
+Fast-forward
+ rich | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ cat rich
+I am rich
+in JESUS name. Amen
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git log
+commit 0c4ad261deba6a82007abf83243905e12ae5dec3 (HEAD -> master, vv/master)
+Author: Vianney Tapchom <rvtapchom@gmail.com>
+Date:   Fri Oct 13 07:19:36 2023 +0000
+
+    rich indeed
+
+commit 55a0895b1201466f74c6535df1aebbf91c677b95
+Author: Raissa Massado <rvmassado23@gmail.com>
+Date:   Thu Oct 12 23:21:12 2023 -0700
+
+    first commit
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git show 55a0895
+commit 55a0895b1201466f74c6535df1aebbf91c677b95
+Author: Raissa Massado <rvmassado23@gmail.com>
+Date:   Thu Oct 12 23:21:12 2023 -0700
+
+    first commit
+
+diff --git a/deploy.sh b/deploy.sh
+new file mode 100644
+index 0000000..a29e473
+--- /dev/null
++++ b/deploy.sh
+@@ -0,0 +1 @@
++deployment is ready
+diff --git a/list.txt b/list.txt
+new file mode 100644
+index 0000000..ec0c468
+--- /dev/null
++++ b/list.txt
+@@ -0,0 +1,4 @@
++octave
++annie
++maurice
++vianney
+diff --git a/rich b/rich
+new file mode 100644
+index 0000000..acc4c19
+--- /dev/null
++++ b/rich
+@@ -0,0 +1 @@
++I am rich
+
+Raissa@DESKTOP-VQJ8FF1 MINGW64 ~/Documents/paypal (master)
+$ git show 0c4ad26
+commit 0c4ad261deba6a82007abf83243905e12ae5dec3 (HEAD -> master, vv/master)
+Author: Vianney Tapchom <rvtapchom@gmail.com>
+Date:   Fri Oct 13 07:19:36 2023 +0000
+
+    rich indeed
+
+diff --git a/rich b/rich
+index acc4c19..8eb494e 100644
+--- a/rich
++++ b/rich
+@@ -1 +1,2 @@
+-I am rich
++I am rich
++in JESUS name. Amen
