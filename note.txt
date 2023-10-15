@@ -1,0 +1,128 @@
+[ec2-user@demo ~]$ ls
+
+
+#IInd STAGE (GitClone)
+---------------------
+
+
+[ec2-user@demo ~]$ git clone https://github.com/NoRKATech/paypal
+Cloning into 'paypal'...
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 0), reused 5 (delta 0), pack-reused 0
+Receiving objects: 100% (5/5), done.
+[ec2-user@demo ~]$ ls
+paypal
+[ec2-user@demo ~]$
+[ec2-user@demo ~]$ cd paypal
+[ec2-user@demo paypal]$ cd paypal/
+-bash: cd: paypal/: No such file or directory
+[ec2-user@demo paypal]$ git log
+commit 55a0895b1201466f74c6535df1aebbf91c677b95 (HEAD -> master, origin/ma                                                                                  ster, origin/HEAD)
+Author: Raissa Massado <rvmassado23@gmail.com>
+Date:   Thu Oct 12 23:21:12 2023 -0700
+
+    first commit
+[ec2-user@demo paypal]$ git config --global user.email "rvtapchom@gmail.co                                                                                  m"
+git config --global user.name "Vianney Tapchom"
+[ec2-user@demo paypal]$
+[ec2-user@demo paypal]$ git branch
+* master
+[ec2-user@demo paypal]$ ls
+deploy.sh  list.txt  rich
+[ec2-user@demo paypal]$ cat rich
+I am rich
+[ec2-user@demo paypal]$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+[ec2-user@demo paypal]$ git remote -v
+origin  https://github.com/NoRKATech/paypal (fetch)
+origin  https://github.com/NoRKATech/paypal (push)
+[ec2-user@demo paypal]$ echo in JESUS name. Amen > rich
+[ec2-user@demo paypal]$ cat rich
+in JESUS name. Amen
+[ec2-user@demo paypal]$ echo "I am rich " > rich
+[ec2-user@demo paypal]$ cat rich
+I am rich
+[ec2-user@demo paypal]$ echo in JESUS name. Amen >> rich
+[ec2-user@demo paypal]$ cat rich
+I am rich
+in JESUS name. Amen
+[ec2-user@demo paypal]$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   rich
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[ec2-user@demo paypal]$ git add .
+[ec2-user@demo paypal]$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   rich
+
+[ec2-user@demo paypal]$ git commit -m "rich indeed"
+[master 0c4ad26] rich indeed
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[ec2-user@demo paypal]$ git log
+commit 0c4ad261deba6a82007abf83243905e12ae5dec3 (HEAD -> master)
+Author: Vianney Tapchom <rvtapchom@gmail.com>
+Date:   Fri Oct 13 07:19:36 2023 +0000
+
+    rich indeed
+
+commit 55a0895b1201466f74c6535df1aebbf91c677b95 (origin/master, origin/HEA                                                                                  D)
+Author: Raissa Massado <rvmassado23@gmail.com>
+Date:   Thu Oct 12 23:21:12 2023 -0700
+
+    first commit
+[ec2-user@demo paypal]$ git log
+commit 0c4ad261deba6a82007abf83243905e12ae5dec3 (HEAD -> master)
+Author: Vianney Tapchom <rvtapchom@gmail.com>
+Date:   Fri Oct 13 07:19:36 2023 +0000
+
+    rich indeed
+
+commit 55a0895b1201466f74c6535df1aebbf91c677b95 (origin/master, origin/HEA                                                                                  D)
+Author: Raissa Massado <rvmassado23@gmail.com>
+Date:   Thu Oct 12 23:21:12 2023 -0700
+
+    first commit
+[ec2-user@demo paypal]$ cat rich
+I am rich
+in JESUS name. Amen
+
+
+#IIIrd STAGE (GitPush)
+---------------------
+
+[ec2-user@demo paypal]$ git remote -v
+origin  https://github.com/NoRKATech/paypal (fetch)
+origin  https://github.com/NoRKATech/paypal (push)
+[ec2-user@demo paypal]$ git push origin master
+Username for 'https://github.com': Raissa2B8
+Password for 'https://Raissa2B8@github.com':
+remote: Support for password authentication was removed on August 13, 2021                                                                                  .
+remote: Please see https://docs.github.com/en/get-started/getting-started-                                                                                  with-git/about-remote-repositories#cloning-with-https-urls for information                                                                                   on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/NoRKATech/paypal/'
+[ec2-user@demo paypal]$ git push origin master
+Username for 'https://github.com': Raissa2B8
+Password for 'https://Raissa2B8@github.com':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 285 bytes | 285.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/NoRKATech/paypal
+   55a0895..0c4ad26  master -> master
+
